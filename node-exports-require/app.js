@@ -1,6 +1,6 @@
-// const index = require('./routes/home');
-// console.log(index());
+const index = require('./routes/home');
+console.log('index :', index());
 
-const corp = require('./routes/home/corp');
-corp.employee();
-corp.dept();
+const lib = require('./routes/home/lib');
+console.log('lib.nowDate :', lib.nowDate());
+lib.hello();
