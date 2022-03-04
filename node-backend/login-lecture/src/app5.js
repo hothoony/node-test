@@ -9,7 +9,7 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 // static resource
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/frontend/public`));
 
 // bodyParser
 app.use(bodyParser.json());
