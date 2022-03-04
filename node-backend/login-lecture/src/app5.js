@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-const home = require('./routes/home/index');
+const home = require('./routes/index');
 app.use('/', home);
 
 const PORT = 3000;
