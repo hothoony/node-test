@@ -17,7 +17,11 @@ const content = (() => {
 })();
 
 app.get('/', (req, res) => {
-    res.send(content);
+    // res.send(content);
+
+    res.write('<h1>v2</h1>');
+    res.write(content);
+    res.end();
 });
 
 app.use(memberRouter);

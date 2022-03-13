@@ -1,4 +1,6 @@
 const express = require('express');
+const memberRouter = require('./routes/memberRouter');
+
 const app = express();
 
 const port = 3000;
@@ -17,40 +19,12 @@ const content = (() => {
 app.get('/', (req, res) => {
     // res.send(content);
 
-    res.write('<h1>v1</h1>');
+    res.write('<h1>v3</h1>');
     res.write(content);
     res.end();
 });
 
-app.get('/members', (req, res) => {
-    res.write('<h1>member list</h1>');
-    res.write(content);
-    res.end();
-});
-
-app.get('/members/create', (req, res) => {
-    res.write('<h1>member create form</h1>');
-    res.write(content);
-    res.end();
-});
-
-app.get('/members/:id', (req, res) => {
-    res.write(`<h1>get member id ${req.params.id}</h1>`);
-    res.write(content);
-    res.end();
-});
-
-app.get('/members/:id/update', (req, res) => {
-    res.write(`<h1>update member id ${req.params.id}</h1>`);
-    res.write(content);
-    res.end();
-});
-
-app.get('/members/:id/delete', (req, res) => {
-    res.write(`<h1>delete member id ${req.params.id}</h1>`);
-    res.write(content);
-    res.end();
-});
+app.use(memberRouter);
 
 app.listen(port, (error) => {
     if (error) {

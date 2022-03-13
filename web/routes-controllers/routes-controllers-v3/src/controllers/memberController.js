@@ -1,8 +1,3 @@
-const express = require('express');
-const app = express();
-
-const port = 3000;
-
 const content = (() => {
     let str = '';
     str += '<a href="/">/</a><br>';
@@ -14,48 +9,40 @@ const content = (() => {
     return str;
 })();
 
-app.get('/', (req, res) => {
-    // res.send(content);
-
-    res.write('<h1>v1</h1>');
-    res.write(content);
-    res.end();
-});
-
-app.get('/members', (req, res) => {
+const getMembers = (req, res) => {
     res.write('<h1>member list</h1>');
     res.write(content);
     res.end();
-});
+};
 
-app.get('/members/create', (req, res) => {
+const createMember = (req, res) => {
     res.write('<h1>member create form</h1>');
     res.write(content);
     res.end();
-});
+};
 
-app.get('/members/:id', (req, res) => {
+const getMember = (req, res) => {
     res.write(`<h1>get member id ${req.params.id}</h1>`);
     res.write(content);
     res.end();
-});
+};
 
-app.get('/members/:id/update', (req, res) => {
+const updateMember = (req, res) => {
     res.write(`<h1>update member id ${req.params.id}</h1>`);
     res.write(content);
     res.end();
-});
+};
 
-app.get('/members/:id/delete', (req, res) => {
+const deleteMember = (req, res) => {
     res.write(`<h1>delete member id ${req.params.id}</h1>`);
     res.write(content);
     res.end();
-});
+};
 
-app.listen(port, (error) => {
-    if (error) {
-        console.error(error);
-    } else {
-        console.log(`server is listening on port ${port}`);
-    }
-});
+module.exports = {
+    getMembers,
+    createMember,
+    getMember,
+    updateMember,
+    deleteMember,
+};
