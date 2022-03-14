@@ -6,13 +6,13 @@ function loginUser(id, pw, callback) {
     }, 3000);
 }
 
-function getUserTeams(user, callback) {
+function getTeams(userName, callback) {
     setTimeout(() => {
         callback([{teamId: '11'}, {teamId: '22'}]);
     }, 3000);
 }
 
-function getTeam(teamId, callback) {
+function getTeamName(teamId, callback) {
     setTimeout(() => {
         callback({teamName: 'teamA'});
     }, 2000);
@@ -21,9 +21,9 @@ function getTeam(teamId, callback) {
 // callback hell
 loginUser('aa', 'bb', user => {
     console.log('login ok', user);
-    getUserTeams(user, (teams) => {
+    getTeams(user.name, (teams) => {
         console.log('team list ok', teams);
-        getTeam(teams[0].teamId, (team) => {
+        getTeamName(teams[0].teamId, (team) => {
             console.log('team info ok', team.teamName);
         })
     });
