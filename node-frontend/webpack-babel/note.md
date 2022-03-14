@@ -183,3 +183,27 @@ $ npx webpack
 $ ./node_modules/.bin/babel src
 $ ./node_modules/.bin/babel src --out-dir lib
 ```
+
+## devDependencies
+clean-webpack-plugin
+mini-css-extract-plugin
+babel-loader
+css-loader
+style-loader
+file-loader
+webpack
+webpack-cli
+webpack-dev-server
+
+## dependencies
+html-webpack-plugin
+
+
+
+```
+npm i webpack webpack-cli @babel/core @babel/preset-react babel-loader --save-dev -E
+```
+
+```
+npm i react react-dom --save -E
+```
