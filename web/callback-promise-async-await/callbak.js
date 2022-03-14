@@ -2,24 +2,24 @@ console.log('start');
 
 function loginUser(id, pw, callback) {
     setTimeout(() => {
-        callback({name: 'james'});
+        callback({ name: 'james' });
     }, 3000);
 }
 
 function getTeams(userName, callback) {
     setTimeout(() => {
-        callback([{teamId: '11'}, {teamId: '22'}]);
+        callback([{ teamId: '11' }, { teamId: '22' }]);
     }, 3000);
 }
 
 function getTeamName(teamId, callback) {
     setTimeout(() => {
-        callback({teamName: 'teamA'});
+        callback({ teamName: 'teamA' });
     }, 2000);
 }
 
 // callback hell
-loginUser('aa', 'bb', user => {
+loginUser('aa', 'bb', (user) => {
     console.log('login ok', user);
     getTeams(user.name, (teams) => {
         console.log('team list ok', teams);
