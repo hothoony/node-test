@@ -4,7 +4,7 @@ function loginUser(id, pw) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({ name: 'james' });
-        }, 3000);
+        }, 2000);
     });
 }
 
@@ -12,7 +12,7 @@ function getTeams(userName) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve([{ teamId: '11' }, { teamId: '22' }]);
-        }, 3000);
+        }, 2000);
     });
 }
 

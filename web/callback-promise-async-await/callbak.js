@@ -3,13 +3,13 @@ console.log('start');
 function loginUser(id, pw, callback) {
     setTimeout(() => {
         callback({ name: 'james' });
-    }, 3000);
+    }, 2000);
 }
 
 function getTeams(userName, callback) {
     setTimeout(() => {
         callback([{ teamId: '11' }, { teamId: '22' }]);
-    }, 3000);
+    }, 2000);
 }
 
 function getTeamName(teamId, callback) {
