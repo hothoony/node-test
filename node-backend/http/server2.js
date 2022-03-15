@@ -1,5 +1,6 @@
 const http = require('http');
-const app = http.createServer((req, res) => {
+
+const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     console.log(req.url);
     if (req.url === '/') {
@@ -9,6 +10,6 @@ const app = http.createServer((req, res) => {
     }
 });
 
-app.listen(3000, () => {
+server.listen(3000, () => {
     console.log('http server listening');
 });

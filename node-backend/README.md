@@ -1,10 +1,10 @@
 # node backend
 ## backend library
-- `express` web server
-- `morgan` log
-- `winston` log
-- `ejs` view template
 - `nodemon` server auto restart
+- `express` web server
+- `ejs` view template
+- `winston` logging
+- `morgan` logging
 - `body-parser` request body parsing
 
 ## npm install
@@ -54,3 +54,28 @@
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
     ```
+
+## middleware
+```
+app.use()
+```
+```
+app.use(morgan('common'));
+app.use(express.static('public'));
+```
+
+## npm install
+### dependencies
+```bash
+npm install express
+npm install ejs
+npm install dotenv
+npm install winston
+npm install winston-daily-rotate-file
+npm install morgan
+```
+
+### devDependencies
+```
+npm install --save-dev nodemon -g
+```

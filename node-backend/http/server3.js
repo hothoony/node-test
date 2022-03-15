@@ -1,5 +1,4 @@
 const http = require('http');
-const port = 3000;
 
 const server = http.createServer((req, res) => {
     res.write('Hello World');
@@ -7,7 +6,7 @@ const server = http.createServer((req, res) => {
     res.end();
 });
 
-server.listen(port, (error) => {
+server.listen(3000, (error) => {
     if (error) {
         console.log('error occured', error);
     } else {
