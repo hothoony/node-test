@@ -1,6 +1,7 @@
 const express = require('express');
 const lodash = require('lodash');
 const morgan = require('morgan');
+const aboutRoute = require('./routes/AboutRoute')
 
 // express app
 const app = express();
@@ -38,14 +39,7 @@ app.get('/', (req, res) => {
     res.render('index', {title: 'index 페이지', boards});
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', {title: 'about 페이지'});
-});
-
-// redirect
-app.get('/about-me', (req, res) => {
-    res.redirect('/about');
-});
+app.use(aboutRoute);
 
 // middleware > 404
 app.use((req, res) => {
