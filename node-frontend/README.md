@@ -15,6 +15,15 @@ npm install @babel/preset-react -D
 npm install css-loader style-loader -D
 // scss
 npm install sass-loader node-sass -D
+
+// html
+npm install html-loader -D
+// file
+npm install file-loader -D
+// html-webpack-plugin
+npm install html-webpack-plugin -D
+// mini-css-extract-plugin
+npm install mini-css-extract-plugin -D
 ```
 
 ## node config
@@ -68,4 +77,18 @@ module.exports = {
 {
     "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
+```
+
+## webpack 실행
+```
+$ ./node_modules/.bin/webpack --mode=development
+
+$ npx webpack
+```
+
+## babel 실행
+```
+$ ./node_modules/.bin/babel src
+
+$ ./node_modules/.bin/babel src --out-dir lib
 ```
