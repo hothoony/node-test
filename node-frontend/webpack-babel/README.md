@@ -117,9 +117,8 @@
     ```bash
     $ npm install @babel/core --save-dev
     $ npm install @babel/cli --save-dev
-    $ npm install babel-cli --save-dev
+    $ npm install @babel/preset-env --save-dev
     $ npm install babel-loader --save-dev
-    $ npm install babel-preset-env --save-dev
     ```
 
 - ### scripts build 추가
