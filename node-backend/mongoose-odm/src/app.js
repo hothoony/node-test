@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const blogRouter = require('./routes/blogRoutes');
 const blogRouter2 = require('./routes/blogRoutes2');
 
@@ -38,9 +39,13 @@ mongoose.connect('mongodb://myuser:test1234@localhost:27017/admin?retryWrites=tr
         console.error(err)
     });
 
-app.get('/', (req, res) => {
-    res.redirect('/blogs');
-});
+
+app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 // app.use(blogRouter);
 app.use('/blogs', blogRouter2);
+
+app.get('/', (req, res) => {
+    res.redirect('/blogs');
+});

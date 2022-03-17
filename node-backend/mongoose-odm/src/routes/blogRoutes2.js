@@ -1,12 +1,12 @@
 const express = require('express');
-const blogController = require('../controllers/blogController');
+const blogController2 = require('../controllers/blogController2');
 
 const router = express.Router();
 
-router.get('/add', blogController.save);
-router.get('/', blogController.find);
-router.get('/:id', blogController.findById);
-router.get('/:id/update', blogController.update);
-router.get('/:id/delete', blogController.deleteOne);
+router.post('/', blogController2.save);
+router.get('/', blogController2.find);
+router.get('/:id', blogController2.findById);
+router.put('/:id', blogController2.update);
+router.delete('/:id', blogController2.deleteOne);
 
 module.exports = router;
