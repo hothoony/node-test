@@ -23,10 +23,11 @@ module.exports = {
             }
         ]
     },
-    // devtool: 'cheap-module-eval-source-map',
-    // devtool: 'source-map',
-    devtool: 'inline-source-map', // development
-    // devtool: 'cheap-module-source-map', // production
+    devtool: 'none',
+    // devtool: 'eval-source-map',
+    // devtool: 'eval-cheap-module-source-map',
+    // devtool: 'cheap-module-source-map',
+    // devtool: 'inline-cheap-module-source-map',
     devServer: {
         static: {
             directory: path.join(__dirname, 'public')
