@@ -9,12 +9,14 @@ npm init -y
 npm install webpack webpack-cli -D
 npm install webpack-dev-server -D
 // babel
-npm install @babel/core @babel/preset-env babel-loader -D
-npm install @babel/preset-react -D
+npm install @babel/core @babel/cli babel-loader -D
+npm install @babel/preset-env @babel/preset-react -D
 // css
 npm install css-loader style-loader -D
 // scss
 npm install sass-loader node-sass -D
+// react
+npm install react react-dom
 
 // html
 npm install html-loader -D
@@ -72,7 +74,7 @@ module.exports = {
 ```
 
 ## babel config
-- ### .babelrc
+- ### babel.config.json (.babelrc.json)
 ```javascript
 {
     "presets": ["@babel/preset-env", "@babel/preset-react"]
@@ -82,7 +84,7 @@ module.exports = {
 ## webpack 실행
 ```
 $ ./node_modules/.bin/webpack --mode=development
-
+$ ./node_modules/.bin/webpack --mode=production
 $ npx webpack
 ```
 
@@ -91,4 +93,11 @@ $ npx webpack
 $ ./node_modules/.bin/babel src
 
 $ ./node_modules/.bin/babel src --out-dir lib
+```
+
+## webpack-dev-server
+- ### auto build
+```
+webpack --mode=development --watch
+webpack-dev-server --hot
 ```
