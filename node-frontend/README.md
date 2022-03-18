@@ -93,7 +93,6 @@ $ npx webpack
 ## babel 실행
 ```
 $ ./node_modules/.bin/babel src
-
 $ ./node_modules/.bin/babel src --out-dir lib
 ```
 
