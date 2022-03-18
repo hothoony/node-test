@@ -1,11 +1,9 @@
-"use strict";
-
 const nowDate = () => {
     return new Date();
 };
 
 const hello = () => {
-    console.log('lib hello');
+    console.log('hello world');
 };
 
 module.exports = {nowDate, hello};

@@ -1,7 +1,5 @@
-'use strict';
-
 const homeRoot = () => {
-    return 'here is home root';
+    return 'this is homeRoot';
 };
 
 module.exports = homeRoot;
