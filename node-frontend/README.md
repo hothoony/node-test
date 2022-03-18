@@ -49,19 +49,19 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.join(__dirname, 'public'),
-        filename: 'bundle.js',
+        path: path.join(__dirname, 'public/js'),
+        filename: 'bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: 'babel-loader'
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.scss$/,
@@ -69,11 +69,17 @@ module.exports = {
             }
         ]
     },
-    devtool: 'cheap-module-eval-source-map',
+    // devtool: 'cheap-module-eval-source-map',
+    // devtool: 'source-map',
+    devtool: 'inline-source-map', // development
+    // devtool: 'cheap-module-source-map', // production
     devServer: {
-        contentBase: path.join(__dirname, 'public')
-    }
-}
+        static: {
+            directory: path.join(__dirname, 'public')
+        }
+    },
+};
+
 ```
 
 ## babel config

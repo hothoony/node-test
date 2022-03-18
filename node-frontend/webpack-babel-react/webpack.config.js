@@ -26,7 +26,7 @@ module.exports = {
     // devtool: 'cheap-module-eval-source-map',
     // devtool: 'source-map',
     devtool: 'inline-source-map', // development
-    // devtool: 'cheap-module-source-map', // for production
+    // devtool: 'cheap-module-source-map', // production
     devServer: {
         static: {
             directory: path.join(__dirname, 'public')
