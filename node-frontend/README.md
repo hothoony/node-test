@@ -4,6 +4,7 @@ npm init -y
 ```
 
 ## npm install
+- ### required
 ```javascript
 // webpack
 npm install webpack webpack-cli -D
@@ -18,7 +19,7 @@ npm install sass-loader node-sass -D
 // react
 npm install react react-dom
 ```
-
+- ### optional
 ```javascript
 // html
 npm install html-loader -D
