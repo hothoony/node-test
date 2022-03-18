@@ -25,8 +25,6 @@ npm install react react-dom
 npm install html-loader -D
 // file
 npm install file-loader -D
-// bootstrap
-npm install bootstrap -D
 // html-webpack-plugin
 npm install html-webpack-plugin -D
 // webpack-merge 
@@ -40,6 +38,10 @@ npm install jquery popper.js -D
 // optimize-css-assets-webpack-plugin
 npm install optimize-css-assets-webpack-plugin -D
 // terser-webpack-plugin
+// bootstrap
+npm install bootstrap -D
+// jqery, popper.js
+npm install --save-dev jquery popper.js
 ```
 
 ## node config
