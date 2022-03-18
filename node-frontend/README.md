@@ -25,10 +25,21 @@ npm install react react-dom
 npm install html-loader -D
 // file
 npm install file-loader -D
+// bootstrap
+npm install bootstrap -D
 // html-webpack-plugin
 npm install html-webpack-plugin -D
+// webpack-merge 
+npm install webpack-merge -D
+// clean-webpack-plugin
+npm install clean-webpack-plugin
 // mini-css-extract-plugin
 npm install mini-css-extract-plugin -D
+// jquery popper.js
+npm install jquery popper.js -D
+// optimize-css-assets-webpack-plugin
+npm install optimize-css-assets-webpack-plugin -D
+// terser-webpack-plugin
 ```
 
 ## node config
@@ -96,6 +107,9 @@ module.exports = {
 $ ./node_modules/.bin/webpack --mode=development
 $ ./node_modules/.bin/webpack --mode=production
 $ npx webpack
+
+webpack --config webpack.dev.js
+webpack --config webpack.prod.js
 ```
 
 ## babel 실행

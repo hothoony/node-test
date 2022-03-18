@@ -5,6 +5,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'public/js'),
         filename: 'bundle.js'
+        // filename: 'bundle.[contentHash].js'
     },
     module: {
         rules: [
@@ -23,6 +24,12 @@ module.exports = {
             }
         ]
     },
+    optimization: {
+
+    },
+    plugins: [
+
+    ],
     devtool: 'none',
     // devtool: 'eval-source-map',
     // devtool: 'eval-cheap-module-source-map',
