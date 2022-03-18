@@ -1,0 +1,12 @@
+// variable
+$bg-color: darkgray;
+$text-color: yellow;
+
+* {
+    background-color: $bg-color;
+    color: $text-color;
+
+    h1 {
+        color: red;
+    }
+}

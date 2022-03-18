@@ -17,7 +17,9 @@ npm install css-loader style-loader -D
 npm install sass-loader node-sass -D
 // react
 npm install react react-dom
+```
 
+```javascript
 // html
 npm install html-loader -D
 // file
