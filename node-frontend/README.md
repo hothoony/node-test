@@ -12,19 +12,13 @@ npm install webpack-dev-server -D
 // babel
 npm install @babel/core @babel/cli babel-loader -D
 npm install @babel/preset-env @babel/preset-react -D
-// css
-npm install css-loader style-loader -D
-// scss
+// css, scss
+npm install style-loader css-loader -D
 npm install sass-loader node-sass -D
 // react
 npm install react react-dom
-```
-- ### optional
-```javascript
-// html
-npm install html-loader -D
-// file
-npm install file-loader -D
+// html, file
+npm install html-loader file-loader -D
 // html-webpack-plugin
 npm install html-webpack-plugin -D
 // webpack-merge 
@@ -33,15 +27,13 @@ npm install webpack-merge -D
 npm install clean-webpack-plugin
 // mini-css-extract-plugin
 npm install mini-css-extract-plugin -D
-// jquery popper.js
-npm install jquery popper.js -D
-// optimize-css-assets-webpack-plugin
-npm install optimize-css-assets-webpack-plugin -D
-// terser-webpack-plugin
+```
+- ### optional
+```javascript
 // bootstrap
 npm install bootstrap -D
-// jqery, popper.js
-npm install --save-dev jquery popper.js
+// jquery popper.js
+npm install jquery popper.js -D
 ```
 
 ## node config
