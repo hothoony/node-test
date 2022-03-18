@@ -34,9 +34,9 @@ npm install mini-css-extract-plugin -D
 - ### package.json
 ```json
 "scripts": {
-    "devBuild": "webpack --mode=development",
+    "devbuild": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --hot"
 }
 ```
 
