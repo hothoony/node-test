@@ -2,10 +2,10 @@ const axios = require('axios');
 
 const getData = async () => {
 
-    // const statusList = [200, 200, 200];
+    const statusList = [200, 200, 200];
     // const statusList = [500, 200, 200];
     // const statusList = [200, 500, 200];
-    const statusList = [200, 200, 500];
+    // const statusList = [200, 200, 500];
 
     try {
 
@@ -20,6 +20,7 @@ const getData = async () => {
 
     } catch (error) {
         console.error('error=', error);
+        console.error('error.response=', error.response);
     }
 }
 

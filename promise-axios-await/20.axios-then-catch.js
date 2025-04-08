@@ -21,16 +21,19 @@ const getData = async () => {
             })
             .catch(error3 => {
                 console.error('error3=', error3);
+                console.error('error3.response=', error3.response);
             });
 
         })
         .catch(error2 => {
             console.error('error2=', error2);
+            console.error('error2.response=', error2.response);
         });
 
     })
     .catch(error1 => {
         console.error('error1=', error1);
+        console.error('error1.response=', error1.response);
     });
 }
 
