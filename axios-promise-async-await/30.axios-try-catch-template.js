@@ -11,6 +11,8 @@ async function callApi(url, param = {}) {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer token',
         },
+        responseType: 'json', // json api 통신
+        // responseType: 'blob', // 파일 다운로드
         timeout: 5000,
     };
 
