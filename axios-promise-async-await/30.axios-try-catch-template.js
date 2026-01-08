@@ -2,6 +2,8 @@ const axios = require('axios');
 
 async function callApi(url, param = {}) {
 
+    // showLoading();
+
     // const url = '';
     // const param = {};
     const config = {
@@ -45,6 +47,8 @@ async function callApi(url, param = {}) {
         }
         // 호출한 쪽에 오류 처리를 위임함
         // throw err;
+    } finally {
+        // hideLoading();
     }
 }
 
