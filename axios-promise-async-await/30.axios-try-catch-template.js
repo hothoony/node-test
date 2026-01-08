@@ -15,12 +15,12 @@ async function callApi(url, param = {}) {
     try {
         const res = await axios.post(url, param, config);
         console.log('res', res);
-        const result = res.data;
-        console.log('result', result);
-        if (result.resultCd === '0000' || result.status === 200) {
+        const resData = res.data;
+        // console.log('resData', resData);
+        if (resData.resultCd === '0000' || resData.status === 200) {
             // 업무 성공
             console.log('업무 성공');
-            return result;
+            return resData;
         } else {
             // 업무 실패
             console.warn('업무 실패');
@@ -44,12 +44,21 @@ async function callApi(url, param = {}) {
             console.error('err =>', err);
         }
         // 호출한 쪽에 오류 처리를 위임함
-        throw err;
+        // throw err;
     }
 }
 
-// callApi('https://dummyjson.com/http/200');
-// callApi('https://dummyjson.com/http/400');
-// callApi('https://dummyjson.com/http/406');
-// callApi('https://dummyjson.com/http/500');
-callApi('https://non-exist-site/');
+(async () => {
+
+    const resData = await callApi('https://dummyjson.com/http/200');
+    // const resData = await callApi('https://dummyjson.com/http/400');
+    // const resData = await callApi('https://dummyjson.com/http/406');
+    // const resData = await callApi('https://dummyjson.com/http/500');
+    // const resData = await callApi('https://non-exist-site/');
+
+    console.log('resData', resData);
+    if (resData) {
+        console.log('resData.message', resData.message);
+    }
+
+})();
